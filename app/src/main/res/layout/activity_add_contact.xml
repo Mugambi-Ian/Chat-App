@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical"
+    tools:context=".userinterface.AddContact">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_card"
+        android:elevation="3dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/AC_btnContacts"
+            android:clickable="true"
+            android:foreground="@drawable/clk_bwr"
+            android:onClick="addContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:text="Contacts"
+            android:textColor="@android:color/black"
+            android:textSize="22dp" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/AC_btnReq"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/clk_bwr"
+            android:onClick="showRequest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:text="Request"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/AC_lytAc"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_card"
+            android:elevation="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/black"
+                android:gravity="center"
+                android:text="Add Contact"
+                android:textColor="@color/ttlColor"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="Enter your contacts username"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/AC_edUname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/dr_box"
+                android:fontFamily="@font/regular"
+                android:hint="User Name"
+                android:imeActionLabel="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_dark"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/clk_bwr">
+
+                <TextView
+                    android:id="@+id/AC_btnTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:onClick="sendRequest"
+                    android:text="Send Request"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp" />
+
+                <ProgressBar
+                    android:id="@+id/AC_pBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:theme="@style/ProgressColor"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_red"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/medium"
+                android:foreground="@drawable/clk_bwr"
+                android:gravity="center"
+                android:onClick="cancelReg"
+                android:text="Cancel"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/AC_lstReq"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:divider="#00000000"
+            android:dividerHeight="10dp"
+            android:visibility="gone"
+            tools:listitem="@layout/list_item_request" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

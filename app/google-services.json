@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "800174223884",
+    "firebase_url": "https://chat-app-254.firebaseio.com",
+    "project_id": "chat-app-254",
+    "storage_bucket": "chat-app-254.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800174223884:android:47cb9101ae11b050cef429",
+        "android_client_info": {
+          "package_name": "com.nenecorp.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "800174223884-ngsomaooueibkags2usmu0in5jmg5m6r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nenecorp.chatapp",
+            "certificate_hash": "d80f865b9ef12d914dbd2bdd3b18e40097e8218d"
+          }
+        },
+        {
+          "client_id": "800174223884-j0ekdbc72dfvdaipoum8e14omm03v9vp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqwMTnPnq4_SACcueeyhJSDaDzQNM9aRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "800174223884-j0ekdbc72dfvdaipoum8e14omm03v9vp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
