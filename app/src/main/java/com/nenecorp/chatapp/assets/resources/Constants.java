@@ -23,6 +23,15 @@ public class Constants {
         }
         return chatId;
     }
+    public static String getInboxId(String... userIds) {
+        char _1 = userIds[0].charAt(0);
+        char _2 = userIds[1].charAt(0);
+        String chatId = userIds[0] + userIds[1];
+        if (_1 >= _2) {
+            chatId = userIds[0] + userIds[1];
+        }
+        return chatId;
+    }
 
     public static void saveChatState(String chatId, boolean b, Context c) {
         SharedPreferences preferences = c.getSharedPreferences("Chat-State", Context.MODE_PRIVATE);

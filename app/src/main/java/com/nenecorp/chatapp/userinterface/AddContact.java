@@ -27,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.nenecorp.chatapp.R;
 import com.nenecorp.chatapp.assets.resources.Constants;
 import com.nenecorp.chatapp.models.DbSocket;
+import com.nenecorp.chatapp.models.chats.ChatRoom;
 import com.nenecorp.chatapp.models.user.User;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
@@ -35,6 +36,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+
+import static com.nenecorp.chatapp.assets.resources.Constants.chatRoom;
 
 public class AddContact extends AppCompatActivity {
     private EditText userName;
@@ -230,5 +233,13 @@ public class AddContact extends AppCompatActivity {
         FirebaseDatabase.getInstance().getReference().child(Constants.USERS).child(userId).child(Constants.Requests).child(x.userId).setValue(null);
         FirebaseDatabase.getInstance().getReference().child(Constants.USERS).child(userId).child(Constants.Contacts).child(x.userId).setValue(x.userId);
         FirebaseDatabase.getInstance().getReference().child(Constants.USERS).child(x.userId).child(Constants.Contacts).child(userId).setValue(userId);
+        ArrayList<String> members = new ArrayList<>();
+        String other = x.userId;
+        members.add(userId);
+        members.add(other);
+        ChatRoom room = new ChatRoom();
+        room.setChatId(Constants.getInboxId(userId, other));
+        room.setChatMembers(members);
+        FirebaseDatabase.getInstance().getReference().child(Constants.ChatRooms).child(room.getChatId()).setValue(chatRoom);
     }
 }

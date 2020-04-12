@@ -106,6 +106,7 @@ public class ChatRoom {
         DatabaseReference ch = sp.child(Constants.Messages).getRef().push();
         x.setChatId(ch.getKey());
         ch.setValue(x);
+
     }
 
     public void translateMessages(final TranslateInterface translateInterface, final Context context, final User... users) {

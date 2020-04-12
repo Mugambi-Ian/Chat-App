@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_card"
-    android:backgroundTint="@color/ttlColor"
+    android:background="@drawable/bg_language"
     android:elevation="1dp"
     android:orientation="horizontal">
 
